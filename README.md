@@ -1,0 +1,1 @@
+Working through book Impractical Python Projects, Lee Vaughan, No Starch Press, and porting programs to Ruby. Python [source code](https://github.com/rlvaugh/Impractical_Python_Projects)
