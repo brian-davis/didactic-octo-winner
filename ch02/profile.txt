@@ -1,0 +1,63 @@
+🤖 ch02 $ ruby-prof palingrams.rb
+
+Number of palingrams: 6
+dow od
+nurses run
+race car
+reback caber
+resaca ser
+yaff ay
+Measure Mode: wall_time
+Thread ID: 700
+Fiber ID: 680
+Total: 0.418900
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+ 42.54      0.178     0.178     0.000     0.000     5452   Array#include?
+ 12.07      0.269     0.051     0.000     0.219     5001   Range#each
+  9.84      0.107     0.041     0.000     0.066        3   Array#map
+  8.83      0.037     0.037     0.000     0.000        1   <Class::IO>#readlines
+  8.11      0.034     0.034     0.000     0.000   235976   String#downcase
+  7.62      0.032     0.032     0.000     0.000   235976   String#chomp
+  5.90      0.025     0.025     0.000     0.000   196574   String#[]
+  1.95      0.008     0.008     0.000     0.000    95558   String#==
+  1.83      0.008     0.008     0.000     0.000   101016   Integer#-
+  0.73      0.274     0.003     0.000     0.271        2   Array#each
+  0.14      0.419     0.001     0.000     0.418        2  *Kernel#load
+  0.13      0.001     0.001     0.000     0.000     5007   String#reverse
+  0.12      0.000     0.000     0.000     0.000     5007   String#length
+  0.10      0.000     0.000     0.000     0.000     5007   Integer#>
+  0.06      0.000     0.000     0.000     0.000        1   Array#sample                   <internal:array>:60
+  0.02      0.000     0.000     0.000     0.000        1   Enumerable#sort_by
+  0.01      0.000     0.000     0.000     0.000        7   IO#write
+  0.00      0.144     0.000     0.000     0.144        1   Object#load_strings            /Users/briandavis/Development/python/impractical-python-projects/Ruby/ch02/load_dictionary.rb:1
+  0.00      0.274     0.000     0.000     0.274        1   Object#find_palingrams         palingrams.rb:5
+  0.00      0.419     0.000     0.000     0.419        1   RubyProf::Cmd#run              /Users/briandavis/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/ruby-prof-1.7.2/bin/ruby-prof:303
+  0.00      0.000     0.000     0.000     0.000        2   IO#puts
+  0.00      0.000     0.000     0.000     0.000        1   Array#length
+  0.00      0.000     0.000     0.000     0.000        4   IO#set_encoding
+  0.00      0.000     0.000     0.000     0.000        2   Kernel#puts
+  0.00      0.000     0.000     0.000     0.000        6   Array#push
+  0.00      0.000     0.000     0.000     0.000        2   Module#method_added
+  0.00      0.000     0.000     0.000     0.000        1   Array#+
+  0.00      0.000     0.000     0.000     0.000        1   Module#const_added
+  0.00      0.000     0.000     0.000     0.000        6   Array#join
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent by this method relative to the total time in the entire program.
+  total     - The total time spent by this method and its children.
+  self      - The time spent by this method.
+  wait      - The time this method spent waiting for other threads.
+  child     - The time spent by this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
