@@ -1,8 +1,7 @@
 require "benchmark"
 
-load("./load_dictionary.rb") # :load_strings
-# WORD_LIST = load_strings("/usr/share/dict/words") || []
-WORD_LIST = load_strings("./dictionary.txt") || []
+require_relative("load_dictionary.rb") # :load_strings
+WORD_LIST = load_strings() || []
 
 # unoptimized
 def find_palingrams1
@@ -73,20 +72,20 @@ def find_palingrams2
   palingram_list
 end
 
-# palingrams = find_palingrams2.sort_by { |a, _| a }.map { |e| e.join(" ") }
-# puts "Number of palingrams: #{palingrams.length}"
-# puts palingrams
+# # palingrams = find_palingrams2.sort_by { |a, _| a }.map { |e| e.join(" ") }
+# # puts "Number of palingrams: #{palingrams.length}"
+# # puts palingrams
 
-Benchmark.bm do |x|
-  x.report("v1") {
-    find_palingrams1
-  }
-  x.report("v2") {
-    find_palingrams2
-  }
-end
+# Benchmark.bm do |x|
+#   x.report("v1") {
+#     find_palingrams1
+#   }
+#   x.report("v2") {
+#     find_palingrams2
+#   }
+# end
 
-# 🤖 ch02 $ ruby palingrams_optimized.rb
-#         user     system      total        real
-# v1 13.474622   0.021343  13.495965 ( 13.496680)
-# v2  0.200365   0.001108   0.201473 (  0.201471)
+# # 🤖 ch02 $ ruby palingrams_optimized.rb
+# #         user     system      total        real
+# # v1 13.474622   0.021343  13.495965 ( 13.496680)
+# # v2  0.200365   0.001108   0.201473 (  0.201471)

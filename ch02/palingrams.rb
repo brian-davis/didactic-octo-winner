@@ -1,6 +1,5 @@
-load("./load_dictionary.rb") # :load_strings
-# WORD_LIST = load_strings("/usr/share/dict/words") || []
-WORD_LIST = load_strings("./dictionary.txt") || []
+require_relative("load_dictionary.rb") # :load_strings
+WORD_LIST = load_strings() || []
 
 # find word-pair palingrams
 def find_palingrams
