@@ -27,8 +27,6 @@ module Perms
       return results
     end
 
-    private
-
     # As in Python: product(range(2), repeat=3) → 000 001 010 011 100 101 110 111
     # https://docs.python.org/3/library/itertools.html#itertools.product
     # Ruby :
@@ -36,6 +34,8 @@ module Perms
     # repeater = [[0,1],[0,1],[0,1]] # a, 3 times.
     # >> [0,1].product([0,1],[0,1]) # must call .product as a method on an element object from repeater
     # => [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [1, 0, 0], [1, 0, 1], [1, 1, 0], [1, 1, 1]]
+    #
+
     def py_product_repeat(basis, repeat_n)
       repeater = repeat_n.times.with_object([]) { |_, a| a.push(basis) }
       repeater.shift.product(*repeater)
