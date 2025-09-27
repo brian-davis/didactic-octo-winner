@@ -1,0 +1,9 @@
+--- !ruby/object:Treat::Entities::Paragraph
+value: Sentence number one. sentence number two.
+id: 1300
+parent:
+children: []
+children_hash: {}
+features: {}
+edges: []
+type: :paragraph
