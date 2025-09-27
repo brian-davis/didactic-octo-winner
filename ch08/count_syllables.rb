@@ -4,7 +4,7 @@ require 'json'
 
 module CountSyllables
   # load dictionary of words in haiku corpus but not in cmudict
-  MISSING_WORDS = JSON.load_file("missing_words.json")
+  MISSING_WORDS = JSON.load_file(File.join(__dir__, "missing_words.json"))
   # Carnegie Mellon University Pronouncing Dictionary
   CMUDICT =  NLTK::CMUDict.dict
 
@@ -20,10 +20,11 @@ module CountSyllables
       # FIX: this matches words like "I've" and "don't"
 
       if MISSING_WORDS.include?(word)
-        num_sylls += missing_words[word]
+        num_sylls += MISSING_WORDS[word]
       else
+
         # ignore alt. pronunciations
-        p1 = CMUDICT[word][0] # all phonemes
+        p1 = CMUDICT.dig(word, 0) || [] # all phonemes
         # syllable phonemes marked with number at end
         num_sylls += p1.count { |pn| pn.match(/\d\z/) }
       end
