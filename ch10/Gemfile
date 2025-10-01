@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+# https://github.com/red-data-tools/pycall.rb?tab=readme-ov-file
+gem "pycall"
+
+# https://github.com/red-data-tools/numpy.rb
+gem "numpy"
+
+# https://github.com/red-data-tools/matplotlib.rb
+gem "matplotlib"
