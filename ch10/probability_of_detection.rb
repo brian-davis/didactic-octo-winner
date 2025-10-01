@@ -31,8 +31,7 @@ for num_civs in (2...(MAX_CIVS + 2)).step(CIV_STEP_SIZE)
     if overlap_rollup[1]
       num_single_civs += overlap_rollup[1]
     else
-      # binding.irb
-      next # debug
+      raise "data error"
     end
   end
   prob = 1 - (num_single_civs.to_f / (num_civs * TRIALS))
@@ -42,7 +41,7 @@ for num_civs in (2...(MAX_CIVS + 2)).step(CIV_STEP_SIZE)
   y.push(prob)
 end
 
-coefficients = np.polyfit(x, y, 4) # TODO
+coefficients = np.polyfit(x, y, 4)
 poly = np.poly1d.(coefficients)
 puts
 puts poly

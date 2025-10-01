@@ -1,7 +1,7 @@
 # Python functions
 module Pylike
   module Collections
-    # This is a builder for a Histogram hash.
+    # This is a builder for a histogram Hash.
     #
     # >> require 'pycall'
     # >> coll = PyCall.import_module("collections")
