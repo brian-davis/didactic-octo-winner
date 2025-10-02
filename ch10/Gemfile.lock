@@ -6,6 +6,7 @@ GEM
     numpy (0.4.0)
       pycall (>= 1.2.0.beta1)
     pycall (1.5.2)
+    tk (0.5.1)
 
 PLATFORMS
   arm64-darwin-24
@@ -15,6 +16,7 @@ DEPENDENCIES
   matplotlib
   numpy
   pycall
+  tk
 
 BUNDLED WITH
    2.7.2

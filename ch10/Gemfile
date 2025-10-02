@@ -10,3 +10,8 @@ gem "numpy"
 
 # https://github.com/red-data-tools/matplotlib.rb
 gem "matplotlib"
+
+# https://tkdocs.com/tutorial/firstexample.html
+# https://github.com/ruby/tk?tab=readme-ov-file
+# https://tkdocs.com/tutorial/canvas.html
+gem "tk"
